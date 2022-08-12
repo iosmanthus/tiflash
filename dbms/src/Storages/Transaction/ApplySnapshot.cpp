@@ -361,8 +361,8 @@ DM::SortedExternalDTFileInfos KVStore::preHandleSSTsToDTFiles(
                 schema_snap,
                 snapshot_apply_method,
                 job_type,
-                1000,
-                0,
+                1000000, // TODO (wish): Use parameters
+                536870912, // TODO (wish): Use parameters
                 tmt);
 
             stream->writePrefix();

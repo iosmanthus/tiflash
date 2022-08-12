@@ -95,8 +95,8 @@ void SSTFilesToDTFilesOutputStream::writeSuffix()
     }
 
     LOG_FMT_INFO(log, "Begin print all DTFile ranges...");
-    const auto & files = outputFiles().toUnderType();
-    for (const auto & f : files)
+    const auto files = outputFiles();
+    for (const auto & f : files.toUnderType())
     {
         LOG_FMT_INFO(log, "{}", f.toString());
     }
